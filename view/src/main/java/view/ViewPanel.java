@@ -216,8 +216,11 @@ class ViewPanel extends JPanel implements Observer {
 							e.printStackTrace();
 						}
 							break;
+
+
 					}
 				}
+				//graphics.clearRect(0, 0, this.getWidth(), this.getHeight());
 			}
 
 

@@ -116,6 +116,9 @@ public class Model extends Observable implements IModel {
 					case'A':
 						this.rempmap(i,j,'A');
 						break;
+					case'O':
+						this.rempmap(i,j,'O');
+						break;
 				}
 			}
 		}

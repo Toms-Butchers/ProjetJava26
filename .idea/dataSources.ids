@@ -22,9 +22,9 @@
       </column>
       <column id="6" parent="2" name="key">
         <mandatory>1</mandatory>
-        <data-type>varchar(2)</data-type>
+        <data-type>varchar(11)</data-type>
       </column>
-      <column id="7" parent="2" name="message">
+      <column id="7" parent="2" name="map">
         <mandatory>1</mandatory>
         <data-type>text</data-type>
       </column>
