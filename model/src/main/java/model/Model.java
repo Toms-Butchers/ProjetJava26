@@ -69,7 +69,7 @@ public class Model extends Observable implements IModel {
 			{
 				switch ((maptab[i].charAt(j))){
 					case'R':
-						this.rempmap(i,j,'R');
+						this.rempmap(i,j,'R' );
 						break;
 					case'S':
 						this.rempmap(i,j,'S');
@@ -118,6 +118,9 @@ public class Model extends Observable implements IModel {
 						break;
 					case'O':
 						this.rempmap(i,j,'O');
+						break;
+					case'Z':
+						this.rempmap(i,j,'Z');
 						break;
 				}
 			}

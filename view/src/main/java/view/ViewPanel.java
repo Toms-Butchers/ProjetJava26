@@ -87,7 +87,7 @@ class ViewPanel extends JPanel implements Observer {
 							graphics.drawImage(img, 32*j, 32*i, this);
 						} catch(IOException e) {
 							e.printStackTrace();
-												}
+						}
 							break;
 
 						case 'S':try {
@@ -107,7 +107,7 @@ class ViewPanel extends JPanel implements Observer {
 							break;
 
 						case 'Q':try {
-							Image img = ImageIO.read(new File("sprite/gate.closed.png"));
+							Image img = ImageIO.read(new File("sprite/gate_closed.png"));
 							graphics.drawImage(img, 32*j, 32*i, this);
 						} catch(IOException e) {
 							e.printStackTrace();
@@ -202,15 +202,15 @@ class ViewPanel extends JPanel implements Observer {
 						}
 							break;
 
-						case 'A':try {
-							Image img = ImageIO.read(new File("sprite/lorann.gif"));
+						case 'O':try {
+							Image img = ImageIO.read(new File("  "));
 							graphics.drawImage(img, 32*j, 32*i, this);
 						} catch(IOException e) {
 							e.printStackTrace();
 						}
 							break;
-						case 'O':try {
-							Image img = ImageIO.read(new File(" "));
+						case 'Z':try {
+							Image img = ImageIO.read(new File("sprite/purse.png"));
 							graphics.drawImage(img, 32*j, 32*i, this);
 						} catch(IOException e) {
 							e.printStackTrace();
