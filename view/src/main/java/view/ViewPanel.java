@@ -83,7 +83,7 @@ class ViewPanel extends JPanel implements Observer {
 				{
 					switch (mapmap[i][j]){
 						case 'R':try {
-							Image img = ImageIO.read(new File("C:/Users/WENDLINGJOHAN/Desktop/JPU-BlankProject/sprite/bone.png"));
+							Image img = ImageIO.read(new File("sprite/bone.png"));
 							graphics.drawImage(img, 32*j, 32*i, this);
 						} catch(IOException e) {
 							e.printStackTrace();
@@ -91,7 +91,7 @@ class ViewPanel extends JPanel implements Observer {
 							break;
 
 						case 'S':try {
-							Image img = ImageIO.read(new File("C:/Users/WENDLINGJOHAN/Desktop/JPU-BlankProject/sprite/horizontal_bone.png"));
+							Image img = ImageIO.read(new File("sprite/horizontal_bone.png"));
 							graphics.drawImage(img, 32*j, 32*i, this);
 						} catch(IOException e) {
 							e.printStackTrace();
@@ -99,7 +99,7 @@ class ViewPanel extends JPanel implements Observer {
 							break;
 
 						case 'T':try {
-							Image img = ImageIO.read(new File("C:/Users/WENDLINGJOHAN/Desktop/JPU-BlankProject/sprite/vertical_bone.png"));
+							Image img = ImageIO.read(new File("sprite/vertical_bone.png"));
 							graphics.drawImage(img, 32*j, 32*i, this);
 						} catch(IOException e) {
 							e.printStackTrace();
@@ -107,7 +107,7 @@ class ViewPanel extends JPanel implements Observer {
 							break;
 
 						case 'Q':try {
-							Image img = ImageIO.read(new File("C:/Users/WENDLINGJOHAN/Desktop/JPU-BlankProject/sprite/gate.closed.png"));
+							Image img = ImageIO.read(new File("sprite/gate.closed.png"));
 							graphics.drawImage(img, 32*j, 32*i, this);
 						} catch(IOException e) {
 							e.printStackTrace();
@@ -115,7 +115,7 @@ class ViewPanel extends JPanel implements Observer {
 							break;
 
 						case 'P':try {
-							Image img = ImageIO.read(new File("C:/Users/WENDLINGJOHAN/Desktop/JPU-BlankProject/sprite/gate.open.png"));
+							Image img = ImageIO.read(new File("sprite/gate.open.png"));
 							graphics.drawImage(img, 32*j, 32*i, this);
 						} catch(IOException e) {
 							e.printStackTrace();
@@ -123,7 +123,7 @@ class ViewPanel extends JPanel implements Observer {
 							break;
 
 						case 'N':try {
-							Image img = ImageIO.read(new File("C:/Users/WENDLINGJOHAN/Desktop/JPU-BlankProject/sprite/crystal_ball.png"));
+							Image img = ImageIO.read(new File("sprite/crystal_ball.png"));
 							graphics.drawImage(img, 32*j, 32*i, this);
 						} catch(IOException e) {
 							e.printStackTrace();
@@ -131,7 +131,7 @@ class ViewPanel extends JPanel implements Observer {
 							break;
 
 						case 'M':try {
-							Image img = ImageIO.read(new File("C:/Users/WENDLINGJOHAN/Desktop/JPU-BlankProject/sprite/fireball_5.png"));
+							Image img = ImageIO.read(new File("sprite/fireball_5.png"));
 							graphics.drawImage(img, 32*j, 32*i, this);
 						} catch(IOException e) {
 							e.printStackTrace();
@@ -139,7 +139,7 @@ class ViewPanel extends JPanel implements Observer {
 							break;
 
 						case 'L':try {
-							Image img = ImageIO.read(new File("C:/Users/WENDLINGJOHAN/Desktop/JPU-BlankProject/sprite/fireball_4.png"));
+							Image img = ImageIO.read(new File("sprite/fireball_4.png"));
 							graphics.drawImage(img, 32*j, 32*i, this);
 						} catch(IOException e) {
 							e.printStackTrace();
@@ -147,7 +147,7 @@ class ViewPanel extends JPanel implements Observer {
 							break;
 
 						case 'K':try {
-							Image img = ImageIO.read(new File("C:/Users/WENDLINGJOHAN/Desktop/JPU-BlankProject/sprite/fireball_3.png"));
+							Image img = ImageIO.read(new File("sprite/fireball_3.png"));
 							graphics.drawImage(img, 32*j, 32*i, this);
 						} catch(IOException e) {
 							e.printStackTrace();
@@ -155,7 +155,7 @@ class ViewPanel extends JPanel implements Observer {
 							break;
 
 						case 'J':try {
-							Image img = ImageIO.read(new File("C:/Users/WENDLINGJOHAN/Desktop/JPU-BlankProject/sprite/fireball_2.png"));
+							Image img = ImageIO.read(new File("sprite/fireball_2.png"));
 							graphics.drawImage(img, 32*j, 32*i, this);
 						} catch(IOException e) {
 							e.printStackTrace();
@@ -163,7 +163,7 @@ class ViewPanel extends JPanel implements Observer {
 							break;
 
 						case 'I':try {
-							Image img = ImageIO.read(new File("C:/Users/WENDLINGJOHAN/Desktop/JPU-BlankProject/sprite/fireball_1.png"));
+							Image img = ImageIO.read(new File("sprite/fireball_1.png"));
 							graphics.drawImage(img, 32*j, 32*i, this);
 						} catch(IOException e) {
 							e.printStackTrace();
@@ -171,7 +171,7 @@ class ViewPanel extends JPanel implements Observer {
 							break;
 
 						case 'U':try {
-							Image img = ImageIO.read(new File("C:/Users/WENDLINGJOHAN/Desktop/JPU-BlankProject/sprite/monster_1.png"));
+							Image img = ImageIO.read(new File("sprite/monster_1.png"));
 							graphics.drawImage(img, 32*j, 32*i, this);
 						} catch(IOException e) {
 							e.printStackTrace();
@@ -179,7 +179,7 @@ class ViewPanel extends JPanel implements Observer {
 							break;
 
 						case 'V':try {
-							Image img = ImageIO.read(new File("C:/Users/WENDLINGJOHAN/Desktop/JPU-BlankProject/sprite/monster_2.png"));
+							Image img = ImageIO.read(new File("sprite/monster_2.png"));
 							graphics.drawImage(img, 32*j, 32*i, this);
 						} catch(IOException e) {
 							e.printStackTrace();
@@ -187,7 +187,7 @@ class ViewPanel extends JPanel implements Observer {
 							break;
 
 						case 'X':try {
-							Image img = ImageIO.read(new File("C:/Users/WENDLINGJOHAN/Desktop/JPU-BlankProject/sprite/monster_3.png"));
+							Image img = ImageIO.read(new File("sprite/monster_3.png"));
 							graphics.drawImage(img, 32*j, 32*i, this);
 						} catch(IOException e) {
 							e.printStackTrace();
@@ -195,7 +195,7 @@ class ViewPanel extends JPanel implements Observer {
 							break;
 
 						case 'Y':try {
-							Image img = ImageIO.read(new File("C:/Users/WENDLINGJOHAN/Desktop/JPU-BlankProject/sprite/monster_4.png"));
+							Image img = ImageIO.read(new File("sprite/monster_4.png"));
 							graphics.drawImage(img, 32*j, 32*i, this);
 						} catch(IOException e) {
 							e.printStackTrace();
@@ -203,7 +203,14 @@ class ViewPanel extends JPanel implements Observer {
 							break;
 
 						case 'A':try {
-							Image img = ImageIO.read(new File("C:/Users/WENDLINGJOHAN/Desktop/JPU-BlankProject/sprite/lorann.gif"));
+							Image img = ImageIO.read(new File("sprite/lorann.gif"));
+							graphics.drawImage(img, 32*j, 32*i, this);
+						} catch(IOException e) {
+							e.printStackTrace();
+						}
+							break;
+						case 'O':try {
+							Image img = ImageIO.read(new File(" "));
 							graphics.drawImage(img, 32*j, 32*i, this);
 						} catch(IOException e) {
 							e.printStackTrace();
