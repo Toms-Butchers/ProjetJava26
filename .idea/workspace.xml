@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4cc3f914-3990-463b-9a7b-393a13356946" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/src/main/java/view/ViewPanel.java" afterPath="$PROJECT_DIR$/view/src/main/java/view/ViewPanel.java" />
     </list>
     <ignored path="masterpom.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -907,12 +905,20 @@
       <workItem from="1466008743248" duration="106000" />
       <workItem from="1466059912233" duration="4448000" />
       <workItem from="1466066776311" duration="487000" />
-      <workItem from="1466069104387" duration="328000" />
+      <workItem from="1466069104387" duration="450000" />
     </task>
+    <task id="LOCAL-00001" summary="Phase 3">
+      <created>1466069457809</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1466069457809</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24746000" />
+    <option name="totallyTimeSpent" value="24868000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -955,6 +961,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Phase 3" />
+    <option name="LAST_COMMIT_MESSAGE" value="Phase 3" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
