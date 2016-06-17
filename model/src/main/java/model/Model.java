@@ -92,9 +92,18 @@ public class Model extends Observable implements IModel {
 		{
 			for (int j =0; j<tabmap[i].length();j++)
 			{
+<<<<<<< HEAD
 				switch (tabmap[i].charAt(j)) {
 					case '0':
 						this.putInTabmap(i,j,'0');
+=======
+				switch ((maptab[i].charAt(j))){
+					case'R':
+						this.rempmap(i,j,'R' );
+						break;
+					case'S':
+						this.rempmap(i,j,'S');
+>>>>>>> origin/master
 						break;
 					case 'R':
 						this.putInTabmap(i,j,'R');
@@ -136,6 +145,12 @@ public class Model extends Observable implements IModel {
 						break;
 					default :
 						this.putInTabmap(i,j,' ');
+						break;
+					case'O':
+						this.rempmap(i,j,'O');
+						break;
+					case'Z':
+						this.rempmap(i,j,'Z');
 						break;
 				}
 			}

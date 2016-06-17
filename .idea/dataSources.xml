@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+<<<<<<< HEAD
   <component name="DataSourceManagerImpl" format="xml" hash="2960508312">
     <data-source source="LOCAL" name="MySQL - jpublankproject@localhost" uuid="b2d89a52-8503-4989-9875-0b595a262491">
+=======
+  <component name="DataSourceManagerImpl" format="xml" hash="2945864702">
+    <data-source source="LOCAL" name="MySQL - jpublankproject@localhost" uuid="a8571295-82f7-493d-9014-83b7d8d87a00">
+>>>>>>> origin/master
       <driver-ref>mysql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>

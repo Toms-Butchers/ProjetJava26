@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component name="dataSourceStorage">
+<<<<<<< HEAD
   <data-source name="MySQL - jpublankproject@localhost" uuid="b2d89a52-8503-4989-9875-0b595a262491">
     <database-info product="MySQL" version="5.5.20-log" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
       <extra-name-characters>#@</extra-name-characters>
@@ -36,5 +37,9 @@
         <primary>1</primary>
       </key>
     </database-model>
+=======
+  <data-source name="MySQL - jpublankproject@localhost" uuid="a8571295-82f7-493d-9014-83b7d8d87a00">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+>>>>>>> origin/master
   </data-source>
 </component>
