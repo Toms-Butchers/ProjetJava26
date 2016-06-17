@@ -7,8 +7,6 @@ import java.sql.SQLException;
 
 /**
  * The Class DAOHelloWorld.
- *
- * @author Jean-Aymeric Diet
  */
 class DAOHelloWorld extends DAOEntity<HelloWorld> {
 
@@ -98,7 +96,7 @@ class DAOHelloWorld extends DAOEntity<HelloWorld> {
 			call.execute();
 			final ResultSet resultSet = call.getResultSet();
 			if (resultSet.first()) {
-				helloWorld = new HelloWorld(resultSet.getInt("id"), key, resultSet.getString("message"));
+				helloWorld = new HelloWorld(resultSet.getInt("id"), key, resultSet.getString("map"));
 			}
 			return helloWorld;
 		} catch (final SQLException e) {

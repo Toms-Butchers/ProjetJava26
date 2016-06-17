@@ -1,10 +1,20 @@
 package model;
 
 import java.sql.SQLException;
+
 import java.util.Observable;
 
-import contract.IModel;
+import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.Image;
+import java.io.File;
+import java.io.IOException;
+import java.util.Observer;
 
+import javax.imageio.ImageIO;
+import javax.swing.JPanel;
+
+import contract.IModel;
 
 
 /**
@@ -16,16 +26,35 @@ public class Model extends Observable implements IModel {
 
 	private int height = 12;
 	private int width = 21;
+	
+	private int positionHeroX;
+	private int positionHeroY;
+	
+	public int getPositionHeroX() {
+		return positionHeroX;
+	}
+
+	public void setPositionHeroX(int positionHeroX) {
+		this.positionHeroX = positionHeroX;
+	}
+
+	public int getPositionHeroY() {
+		return positionHeroY;
+	}
+
+	public void setPositionHeroY(int positionHeroY) {
+		this.positionHeroY = positionHeroY;
+	}
 
 	public int getHeight(){
 		return this.height;
 	}
 
-	public int getWidth(){
+	public int getWidth() {
 		return this.width;
 	}
 
-	public char map2D [][] = new char[this.getHeight()][this.getWidth()];
+	public char[][] tabmap2d = new char[this.getHeight()][this.getWidth()];
 
 	/** The message. */
 	private String message;
@@ -42,8 +71,79 @@ public class Model extends Observable implements IModel {
 	 *
 	 * @see contract.IModel#getMessage()
 	 */
+
+	public void getMapInChar() {
+
+	}
+
 	public String getMessage() {
 		return this.message;
+
+	}
+
+
+	public void putInTabmap(int i, int j, char car) {
+		this.tabmap2d[i][j] = car;
+	}
+
+	public void doTheThing() {
+		String[] tabmap = this.message.split("\n") ;
+		for(int i =0; i<tabmap.length; i++)
+		{
+			for (int j =0; j<tabmap[i].length();j++)
+			{
+				switch (tabmap[i].charAt(j)) {
+					case '0':
+						this.putInTabmap(i,j,'0');
+						break;
+					case 'R':
+						this.putInTabmap(i,j,'R');
+						break;
+					case 'S':
+						this.putInTabmap(i,j,'S');
+						break;
+					case 'T':
+						this.putInTabmap(i,j,'T');
+						break;
+					case 'U':
+						this.putInTabmap(i,j,'U');
+						break;
+					case 'V':
+						this.putInTabmap(i,j,'V');
+						break;
+					case 'X':
+						this.putInTabmap(i,j,'X');
+						break;
+					case 'Y':
+						this.putInTabmap(i,j,'Y');
+						break;
+					case 'Z':
+						this.putInTabmap(i,j,'Z');
+						break;
+					case 'A':
+						this.putInTabmap(i,j,'A');
+						break;
+					case 'I':
+						this.putInTabmap(i,j,'I');
+						break;
+					case 'P':
+						this.putInTabmap(i,j,'P');
+						setPositionHeroY(i);
+						setPositionHeroX(j);	
+						break;
+					case 'O':
+						this.putInTabmap(i,j,'O');
+						break;
+					default :
+						this.putInTabmap(i,j,' ');
+						break;
+				}
+			}
+		}
+		
+	}
+	public char[][] getTabmap2d() {
+		return this.tabmap2d;
 	}
 
 	/**
@@ -56,73 +156,6 @@ public class Model extends Observable implements IModel {
 		this.message = message;
 		this.setChanged();
 		this.notifyObservers();
-	}
-	public void rempmap(int i, int j, char carc){
-		this.map2D[i][j] = carc;
-	}
-
-	public void  tabmap() {
-		String[] maptab = this.message.split("\n");
-		for(int i=0; i<maptab.length; i++)
-		{
-			for (int j=0; j<maptab[i].length(); j++)
-			{
-				switch ((maptab[i].charAt(j))){
-					case'R':
-						this.rempmap(i,j,'R');
-						break;
-					case'S':
-						this.rempmap(i,j,'S');
-						break;
-					case'T':
-						this.rempmap(i,j,'T');
-						break;
-					case'Q':
-						this.rempmap(i,j,'Q');
-						break;
-					case'P':
-						this.rempmap(i,j,'P');
-						break;
-					case'N':
-						this.rempmap(i,j,'N');
-						break;
-					case'M':
-						this.rempmap(i,j,'M');
-						break;
-					case'L':
-						this.rempmap(i,j,'L');
-						break;
-					case'K':
-						this.rempmap(i,j,'K');
-						break;
-					case'J':
-						this.rempmap(i,j,'J');
-						break;
-					case'I':
-						this.rempmap(i,j,'I');
-						break;
-					case'U':
-						this.rempmap(i,j,'U');
-						break;
-					case'V':
-						this.rempmap(i,j,'V');
-						break;
-					case'X':
-						this.rempmap(i,j,'X');
-						break;
-					case'Y':
-						this.rempmap(i,j,'Y');
-						break;
-					case'A':
-						this.rempmap(i,j,'A');
-						break;
-				}
-			}
-		}
-	}
-
-	public char[][] getMap2D(){
-		return this.map2D;
 	}
 
 	/*
@@ -147,4 +180,26 @@ public class Model extends Observable implements IModel {
 	public Observable getObservable() {
 		return this;
 	}
+
+	public void moveG(int x, int y) {
+		if(isMovePossible(x, y) == true)
+		{
+			tabmap2d[positionHeroY+y][positionHeroX+x]='P';
+			tabmap2d[positionHeroY][positionHeroX]='0';
+			setPositionHeroX(positionHeroX+x);
+			setPositionHeroY(positionHeroY+y);
+		}
+		
+		else {}
+	}
+	
+	public boolean isMovePossible(int x,  int y)
+	{
+		if(tabmap2d[positionHeroY+y][positionHeroX+x] == '0')
+			return true;
+		
+		else 
+			return false;
+	}
+	
 }

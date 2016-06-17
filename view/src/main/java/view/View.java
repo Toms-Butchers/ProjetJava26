@@ -11,8 +11,6 @@ import contract.IView;
 
 /**
  * The Class View.
- *
- * @author Jean-Aymeric Diet
  */
 public class View implements IView, Runnable {
 
@@ -49,6 +47,14 @@ public class View implements IView, Runnable {
 				return ControllerOrder.m4;
 			case KeyEvent.VK_5:
 				return ControllerOrder.m5;
+			case KeyEvent.VK_LEFT:
+				return ControllerOrder.MoveLeft;
+			case KeyEvent.VK_RIGHT:
+				return ControllerOrder.MoveRight;
+			case KeyEvent.VK_UP:
+				return ControllerOrder.MoveUp;
+			case KeyEvent.VK_DOWN:
+				return ControllerOrder.MoveDown;
 			default:
 				return ControllerOrder.m1;
 		}

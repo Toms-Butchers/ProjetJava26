@@ -5,15 +5,6 @@ import contract.IController;
 import contract.IModel;
 import contract.IView;
 
-import java.io.BufferedReader;
-import java.io.FileInputStream;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.FileReader;
-import java.io.IOException;
-import java.util.ArrayList;
-
-
 // TODO: Auto-generated Javadoc
 /**
  * The Class Controller.
@@ -21,10 +12,10 @@ import java.util.ArrayList;
 public class Controller implements IController {
 
 	/** The view. */
-	private IView		view;
+	private IView view;
 
 	/** The model. */
-	private IModel	model;
+	private IModel model;
 
 	/**
 	 * Instantiates a new controller.
@@ -45,7 +36,7 @@ public class Controller implements IController {
 	 * @see contract.IController#control()
 	 */
 	public void control() {
-		this.view.printMessage(" " + " ");
+		this.view.printMessage("");
 	}
 
 	/**
@@ -73,7 +64,6 @@ public class Controller implements IController {
 	 *
 	 * @see contract.IController#orderPerform(contract.ControllerOrder)
 	 */
-
 	public void orderPerform(final ControllerOrder controllerOrder) {
 		switch (controllerOrder) {
 			case m1:
@@ -91,39 +81,24 @@ public class Controller implements IController {
 			case m5:
 				this.model.loadMessage("m5");
 				break;
-
+			case MoveLeft:
+				this.model.moveG(-1, 0);
+				break;
+			case MoveRight:
+				this.model.moveG(1, 0);
+				break;
+			case MoveUp:
+				this.model.moveG(0, -1);
+				break;
+			case MoveDown:
+				this.model.moveG(0, 1);
+				break;
+			case DiaLeftUp:
+				this.model.moveG(-1, -1);
+				break;
 			default:
 				break;
 		}
 	}
-
-
-
-	/**public class Maps{
-
-			ArrayList<String> lignes = new ArrayList<String>();
-			String fichier ="aaaaaaaaaaaaaaaaaaaaaaaaaaa";
-			BufferedReader br = null;
-
-			try{
-				br = new BufferedReader(new FileReader(fichier));
-				String ligne="";
-				while((ligne = br.readLine()) != null){
-					lignes.add(ligne);
-
-				}
-			}catch(Exception e){
-				e.printStackTrace();
-			}finally{
-			if (br != null)
-				try {
-					br.close();
-				}catch (IOException ioe){
-					ioe.printStackTrace();
-				}
-
-				}
-		}**/
-
 
 }
