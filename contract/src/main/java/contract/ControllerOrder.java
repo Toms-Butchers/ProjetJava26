@@ -5,7 +5,6 @@ package contract;
  */
 public enum ControllerOrder {
 
-<<<<<<< HEAD
 	m1, /** The map 1*/
 	m2, /** The map 2 */
 	m3, /** The map 3 */
@@ -16,12 +15,4 @@ public enum ControllerOrder {
 	MoveUp,
 	MoveDown,
 	DiaLeftUp
-=======
-	m1,
-	m2,
-	m3,
-	m4,
-	m5
-
->>>>>>> origin/master
 }

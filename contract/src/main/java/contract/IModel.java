@@ -45,5 +45,5 @@ public interface IModel {
 	Observable getObservable();
 
 
-	void moveG(int x, int y);
+	void moveG(int x , int y);
 }

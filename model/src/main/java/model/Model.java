@@ -26,6 +26,8 @@ public class Model extends Observable implements IModel {
 
 	private int height = 12;
 	private int width = 21;
+	private Hero hero;
+
 	
 	private int positionHeroX;
 	private int positionHeroY;
@@ -64,6 +66,7 @@ public class Model extends Observable implements IModel {
 	 */
 	public Model() {
 		this.message = "";
+		this.hero = new Hero();
 	}
 
 	/*
@@ -71,6 +74,9 @@ public class Model extends Observable implements IModel {
 	 *
 	 * @see contract.IModel#getMessage()
 	 */
+	public Hero getHero(){
+		return this.hero;
+	}
 
 	public void getMapInChar() {
 
@@ -92,65 +98,62 @@ public class Model extends Observable implements IModel {
 		{
 			for (int j =0; j<tabmap[i].length();j++)
 			{
-<<<<<<< HEAD
 				switch (tabmap[i].charAt(j)) {
-					case '0':
-						this.putInTabmap(i,j,'0');
-=======
-				switch ((maptab[i].charAt(j))){
-					case'R':
-						this.rempmap(i,j,'R' );
-						break;
-					case'S':
-						this.rempmap(i,j,'S');
->>>>>>> origin/master
-						break;
-					case 'R':
-						this.putInTabmap(i,j,'R');
-						break;
-					case 'S':
-						this.putInTabmap(i,j,'S');
-						break;
-					case 'T':
-						this.putInTabmap(i,j,'T');
-						break;
-					case 'U':
-						this.putInTabmap(i,j,'U');
-						break;
-					case 'V':
-						this.putInTabmap(i,j,'V');
-						break;
-					case 'X':
-						this.putInTabmap(i,j,'X');
-						break;
-					case 'Y':
-						this.putInTabmap(i,j,'Y');
-						break;
-					case 'Z':
-						this.putInTabmap(i,j,'Z');
-						break;
-					case 'A':
-						this.putInTabmap(i,j,'A');
-						break;
-					case 'I':
-						this.putInTabmap(i,j,'I');
-						break;
-					case 'P':
-						this.putInTabmap(i,j,'P');
-						setPositionHeroY(i);
-						setPositionHeroX(j);	
-						break;
-					case 'O':
+					case'O':
 						this.putInTabmap(i,j,'O');
 						break;
-					default :
-						this.putInTabmap(i,j,' ');
+					case'R':
+						this.putInTabmap(i,j,'R');
 						break;
-					case'O':
-						this.rempmap(i,j,'O');
+					case'S':
+						this.putInTabmap(i,j,'S');
+						break;
+					case'T':
+						this.putInTabmap(i,j,'T');
+						break;
+					case'Q':
+						this.putInTabmap(i,j,'Q');
+						break;
+					case'P':
+						this.putInTabmap(i,j,'P');
+						break;
+					case'N':
+						this.putInTabmap(i,j,'N');
+						break;
+					case'M':
+						this.putInTabmap(i,j,'M');
+						break;
+					case'L':
+						this.putInTabmap(i,j,'L');
+						break;
+					case'K':
+						this.putInTabmap(i,j,'K');
+						break;
+					case'J':
+						this.putInTabmap(i,j,'J');
+						break;
+					case'I':
+						this.putInTabmap(i,j,'I');
+						break;
+					case'U':
+						this.putInTabmap(i,j,'U');
+						break;
+					case'V':
+						this.putInTabmap(i,j,'V');
+						break;
+					case'X':
+						this.putInTabmap(i,j,'X');
+						break;
+					case'Y':
+						this.putInTabmap(i,j,'Y');
 						break;
 					case'Z':
-						this.rempmap(i,j,'Z');
+						this.putInTabmap(i,j,'Z');
+						break;
+					case'A':
+						this.putInTabmap(i,j,'A');
+						setPositionHeroX(j);
+						setPositionHeroY(i);
 						break;
 				}
 			}
@@ -196,21 +199,24 @@ public class Model extends Observable implements IModel {
 		return this;
 	}
 
-	public void moveG(int x, int y) {
-		if(isMovePossible(x, y) == true)
+	public void moveG(int x ,int y) {
+		if(isMovePossible(positionHeroX+x, positionHeroY+y))
 		{
-			tabmap2d[positionHeroY+y][positionHeroX+x]='P';
-			tabmap2d[positionHeroY][positionHeroX]='0';
+
+			tabmap2d[positionHeroY+y][positionHeroX+x]='A';
+			tabmap2d[positionHeroY][positionHeroX]='O';
 			setPositionHeroX(positionHeroX+x);
 			setPositionHeroY(positionHeroY+y);
+
 		}
-		
+
+
 		else {}
 	}
 	
 	public boolean isMovePossible(int x,  int y)
 	{
-		if(tabmap2d[positionHeroY+y][positionHeroX+x] == '0')
+		if(tabmap2d[y][x] == 'O')
 			return true;
 		
 		else 

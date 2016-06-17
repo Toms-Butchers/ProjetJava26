@@ -56,7 +56,7 @@ public class View implements IView, Runnable {
 			case KeyEvent.VK_DOWN:
 				return ControllerOrder.MoveDown;
 			default:
-				return null;
+				return ControllerOrder.m1;
 		}
 	}
 

@@ -36,7 +36,7 @@ public class Controller implements IController {
 	 * @see contract.IController#control()
 	 */
 	public void control() {
-		this.view.printMessage("");
+		this.view.printMessage("YO :) ");
 	}
 
 	/**
@@ -85,17 +85,17 @@ public class Controller implements IController {
 				this.model.moveG(-1, 0);
 				break;
 			case MoveRight:
-				this.model.moveG(1, 0);
+				this.model.moveG(1 ,0);
 				break;
 			case MoveUp:
-				this.model.moveG(0, -1);
+				this.model.moveG(0 , -1);
 				break;
 			case MoveDown:
-				this.model.moveG(0, 1);
+				this.model.moveG(0 , 1);
 				break;
-			case DiaLeftUp:
-				this.model.moveG(-1, -1);
-				break;
+			/*case DiaLeftUp:
+				this.model.moveG();
+				break;*/
 			default:
 				break;
 		}
